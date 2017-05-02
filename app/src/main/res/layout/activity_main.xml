@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.manuel.ezcalc.MainActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="First"
+        android:id="@+id/firstNumberText"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        android:ems="10"
+        android:id="@+id/firstNumber"
+        android:layout_below="@+id/firstNumberText"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Second"
+        android:id="@+id/secondNumberText"
+        android:layout_below="@+id/firstNumber"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        android:ems="10"
+        android:id="@+id/secondNumber"
+        android:layout_below="@+id/secondNumberText"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Result"
+        android:id="@+id/resultText"
+        android:layout_centerVertical="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:id="@+id/resultNumber"
+        android:layout_below="@+id/resultText"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="+"
+        android:id="@+id/addButton"
+        android:layout_above="@+id/resultText"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="29dp"
+        android:onClick="addButtonPressed" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="-"
+        android:id="@+id/subButton"
+        android:layout_alignTop="@+id/addButton"
+        android:layout_toEndOf="@+id/addButton"
+        android:onClick="subButtonPressed" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="X"
+        android:id="@+id/multButton"
+        android:layout_alignTop="@+id/subButton"
+        android:layout_toEndOf="@+id/subButton"
+        android:onClick="multButtonPressed" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="/"
+        android:id="@+id/divButton"
+        android:layout_alignTop="@+id/multButton"
+        android:layout_toEndOf="@+id/multButton"
+        android:layout_alignBottom="@+id/multButton"
+        android:onClick="divButtonPressed" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="^"
+        android:id="@+id/upButton"
+        android:layout_below="@+id/resultNumber"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="39dp"
+        android:onClick="upButtonPressed" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="press to use result as frist.."
+        android:id="@+id/textView"
+        android:layout_below="@+id/upButton"
+        android:layout_alignParentStart="true" />
+
+</RelativeLayout>
